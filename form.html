@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="CSS/formstyle.css">
+    <link rel="stylesheet" href="CSS/navbarStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagenes/logoSVG.svg" alt="">
+        </div>
+    </header>
+    <nav class="main"></nav>
+
+    <div class="container">
+
+        <div class="form-container">
+            <h1>Formulario de Registro</h1>
+            <p>Por favor, rellene el siguiente formulario con la información requerida.</p>
+
+            <form action="http://httpbin.org/post" method="post" id="formulario">
+                <ul class="outer">
+                    <li class="form__grupo" id="grupo__nombre">
+                        <label for="nombre" class="formulario__label">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <p class="formulario__input-error">El nombre tiene que ser de 3 a 16 digitos y no puede contener números, solo letras.</p>
+                    </li>
+                    <li class="form__grupo" id="grupo__apellido">
+                        <label for="apellido" class="formulario__label">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <p class="formulario__input-error">El apellido tiene que ser de 4 a 25 digitos y no puede contener números, solo letras.</p>
+                    </li>
+                    <li class="form__grupo" id="grupo__email">
+                        <label for="email" class="formulario__label">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <p class="formulario__input-error">Correo inválido.</p>
+                    </li>
+                    <li class="form__grupo" id="grupo__telefono">
+                        <label for="telefono" class="formulario__label">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono"placeholder="Ingresa tu número de teléfono">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <p class="formulario__input-error">El teléfono debe contener entre 7 y 14 números, sin letras, espacios o símbolos.</p>
+                    </li>
+                    <li class="form__grupo" id="grupo__refer">
+                        <label for="referido">Cómo te enteraste de nosotros?</label>
+                        <select name="referido" id="referido">
+                            <option value="">(seleccione una opción)</option>
+                            <option value="1">Facebook</option>
+                            <option value="2">Instagram</option>
+                            <option value="3">A través de un conocido</option>
+                            <option value="4">Otro</option>
+
+                        </select>
+                    </li>
+                    <li class="form__grupo" id="grupo__mensaje">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" rows="6" placeholder="ingresa tu mensaje"></textarea>
+                    </li>
+                    <li class="conditions">
+                        <label class="terminos" for="terminos">Acepto los términos y condiciones.</label>
+                        <input class="terminoscb" type="checkbox" name="terminos"id="terminos">
+                    </li>
+                    <div class="formulario__mensaje"id="formulario__mensaje">
+                        <p><i class="fas fa-exclamation-triangle"></i><b>Error:</b> Por favor rellena el formulario de forma correcta.</p>
+
+                    </div>
+                    
+                    <li class="button-container">
+                        <button name="submit" type="submit">Enviar</button>
+                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado con éxito!</p>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="mapa">
+         
+            <iframe name="mapa"width="325" height="280" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.6657487675257!2d-58.30783888476741!3d-34.713609680431084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a332750cecd88f%3A0xfa8ecfb737f1ce5b!2sFormosa%201019%2C%20B1876%20Bernal%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1665803141892!5m2!1sen!2sar"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="botones">
+                <a id="mapalargo" target="_blank"
+                    href="https://www.google.com/maps/place/Formosa+1019,+B1876+Bernal,+Provincia+de+Buenos+Aires/@-34.7135973,-58.3078454,17z/data=!4m5!3m4!1s0x95a332750cecd88f:0xfa8ecfb737f1ce5b!8m2!3d-34.7136097!4d-58.3056502">Ver
+                    mapa grande</a>
+                <a id="direccion" target="_blank"
+                    href="https://www.google.com/maps/dir//Formosa+1019,+B1876+Bernal,+Provincia+de+Buenos+Aires/@-34.7135973,-58.3078454,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95a332750cecd88f:0xfa8ecfb737f1ce5b!2m2!1d-58.3056502!2d-34.7136097">Obtener
+                    indicaciones</a>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="JS/formValidation.js"></script>
+    <script src="JS/navbar.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
