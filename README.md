@@ -1,2 +1,2 @@
-#  Proyecto-Welcomed-English-Bernal
+#  Welcomed English Bernal
  Sitio web WEBernal
