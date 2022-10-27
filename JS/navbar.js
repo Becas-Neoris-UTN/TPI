@@ -87,7 +87,7 @@ $startNow_Button.onclick = function () {
 
 document.getElementsByTagName("footer").innerHTML=footer
 let boton_whatsapp =`
-        <a class="boton_whatsapp" href="https://wa.me/5491159496795/?text=Welcomed%20English%20Whatsapp" target="_blank">
+        <a class="boton_whatsapp" href="https://wa.me/5491166098123/?text=Hola,%20Welcomed%20English%20Bernal!" target="_blank">
             <img src="/imagenes/whatsapp.png" class="boton_whatsapp">
         </a>
 `
