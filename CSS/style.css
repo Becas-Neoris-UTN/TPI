@@ -273,6 +273,13 @@ footer p {
     color: rgb(158, 158, 158);
 }
 
+.boton_whatsapp img {
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+    width: 3%;
+}
+
 
 /* Media queries */
 

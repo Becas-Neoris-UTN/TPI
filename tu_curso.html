@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcomed English Bernal</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/tu_curso.css">
+  <link rel="stylesheet" href="CSS/navbarStyle.css">
+  <link rel="shortcut icon" href="imagenes/lechuzaSVG.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" href="imagenes/lechuzaICO.ico">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="imagenes/logoPNG.png" alt="">
+    </div>
+  </header>
+  <nav class="main"></nav>
+
+  <br>
+
+  <form id="regForm" action="">
+
+    <h1>Registro</h1>
+    <h2>Con tus datos personalizamos tu curso</h2>
+    <h4>Al finalizar podrás descargar la información</h4>
+
+    <!-- Un "tab" para cada paso del formulario: -->
+    <div class="tab">Nombre:
+      <p><input placeholder="Ingresa tu nombre" oninput="this.className = ''"></p>
+      <p><input placeholder="Ingresa tu apellido" oninput="this.className = ''"></p>
+    </div>
+
+    <div class="tab">Información de contacto:
+      <p><input placeholder="Ingresa tu correo electrónico" oninput="this.className = ''"></p>
+      <p><input placeholder="Ingresa tu teléfono" oninput="this.className = ''"></p>
+    </div>
+
+    <div class="tab">Fecha de nacimiento:
+      <p><input placeholder="dd" oninput="this.className = ''"></p>
+      <p><input placeholder="mm" oninput="this.className = ''"></p>
+      <p><input placeholder="aaaa" oninput="this.className = ''"></p>
+    </div>
+
+    <div class="tab">Nivel:
+      <label for="nivel">Nivel</label>
+      <select id="nivel" name="nivel">
+        <option value="1">A1</option>
+        <option value="2">A2</option>
+        <option value="3">B1</option>
+        <option value="4">B2</option>
+        <option value="5">C1</option>
+        <option value="6">C2</option>
+      </select>
+
+    </div>
+
+    <div style="overflow:auto;">
+      <div class="button-container">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Atras</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
+      </div>
+    </div>
+
+    <!-- Círculos que indican en qué paso se está en el formulario: -->
+    <div style="text-align:center; margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+
+  </form>
+
+  <br>
+
+  <footer id="footer"></footer>
+
+  <script src="JS/navbar.js"></script>
+  <script src="JS/tucurso.js"></script>
+
+
+
+</body>
+
+</html>

@@ -67,7 +67,7 @@ inputs.forEach((input)=> {
 formulario.addEventListener('submit', (e) => {
      e.preventDefault();
     const terminos = document.getElementById('terminos');
-     if(campos.nombre && campos.apellido && campos.email && campos.telefono && terminos.checked ){
+     if(campos.nombre && campos.apellido && campos.email && campos.telefono){
         formulario.reset();
 
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');

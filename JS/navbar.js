@@ -6,6 +6,7 @@ $navbar.innerHTML = `
     <div class="bar-container">
         <div class="bar-item"><a href="index.html">Inicio</a></div>
         <div class="bar-item"><a href="nosotros.html">Nosotros</a></div>
+        <div class="bar-item"><a href="sobre_mi.html">Sobre mi</a></div>
         <div class="bar-item" id="courses">Cursos
             <div class="dropdown">
                 <a href="cursos.html">Niños</a>
@@ -14,19 +15,29 @@ $navbar.innerHTML = `
                 <a href="exam.html">Examenes</a>
             </div>
         </div>
+        <div class="bar-item"><a href="tu_curso.html">Tu curso</a></div>
     <div class="bar-item"><a href="form.html">Contacto</a></div>
 </div>`
 
 
 
 $footer.innerHTML = ` 
-<p>Copyright 2022 by. All rights reserved</p>
+<p>Copyright 2022. All rights reserved</p>
 <div class="site-map">
     <a href="index.html">Inicio</a>
     <a href="nosotros.html">Nosotros</a>
+    <a href="sobre_mi.html">Sobre mi</a>
     <a href="cursos.html">Cursos</a>
+    <a href="tu_curso.html">Tu curso</a>
     <a href="form.html">Contacto</a>
-</div>`
+</div>
+
+<div id="boton_whatsapp">
+        <a class="boton_whatsapp" href="https://wa.me/5491166098123/?text=Hola,%20Welcomed%20English%20Bernal!" target="_blank">
+            <img src="/imagenes/whatsapp.png">
+        </a>
+</div>
+`
 
 const $nav = document.querySelector(".main")
 const $dropdown = document.querySelector(".dropdown")
@@ -70,4 +81,15 @@ $startNow_Button.onclick = function () {
     location.href = "form.html"
 }
 
+
+//Boton Whastapp
+
+
+document.getElementsByTagName("footer").innerHTML=footer
+let boton_whatsapp =`
+        <a class="boton_whatsapp" href="https://wa.me/5491159496795/?text=Welcomed%20English%20Whatsapp" target="_blank">
+            <img src="/imagenes/whatsapp.png" class="boton_whatsapp">
+        </a>
+`
+document.getElementById("boton_whatsapp").innerHTML=boton_whatsapp
 

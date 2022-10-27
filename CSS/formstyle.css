@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  color: #595959;
+  box-sizing: border-box;
 }
 
 body {
@@ -20,19 +22,36 @@ p {
   padding: 3%;
   margin: 0 auto;
   display: grid;
-  grid-template: 1fr / 3fr 1fr;
+  grid-template: 1fr / 2fr 1fr;
   gap: 1%;
   align-items: center;
+
 }
 
 .container * {
   box-sizing: border-box;
+
 }
 
 .form-container {
   display: grid;
   gap: 3%;
-  padding: 5%;
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgb(201 200 200);
+
+}
+
+input, select , textarea {
+  background-color: #ffffff; 
+  width: 70%; 
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgb(201 200 200);
+
 }
 
 .outer {
@@ -65,8 +84,8 @@ p {
 
 .outer>li>label,
 .outer li p {
-  flex: 1 0 120px;
-  max-width: 220px;
+  flex: 2 0 120px;
+  max-width: 300px;
 }
 
 .outer>li>label+* {
@@ -82,10 +101,11 @@ p {
 .outer li textarea {
   padding: 15px;
   border: none;
+  border-radius: 5px;
 }
 
 .conditions {
- margin-left: 30%;
+  margin-left: 30%;
 }
 
 .terminos {
@@ -112,7 +132,8 @@ p {
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: center;
+  align-items: center;  
+  padding: 2%;
 }
 
 .botones {
@@ -123,18 +144,20 @@ p {
 
 .button-container button {
   margin-left: auto;
-  padding: 2% 4%;
+  padding: 1%;
   background-color: rgba(189, 35, 35, 0.534);
   color: white;
   border: 1px solid rgb(185, 163, 163);
   border-radius: 6px;
-  font-size: 1.5vw;
+  font-size: 1vw;
   cursor: pointer;
 }
 
 .button-container button:hover {
   background-color: rgba(116, 30, 30, 0.534);
 }
+
+
 
 /* ----Estilos para validacion---- */
 .formulario__validacion-estado {
@@ -197,7 +220,7 @@ p {
 }
 
 @media screen and (max-width:576px) {
-  
+
   form {
     padding: 10%;
   }
