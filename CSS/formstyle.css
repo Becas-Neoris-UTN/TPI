@@ -15,7 +15,6 @@ h1,
 p {
   display: flex;
   justify-content: center;
-
 }
 
 .container {
@@ -25,12 +24,10 @@ p {
   grid-template: 1fr / 2fr 1fr;
   gap: 1%;
   align-items: center;
-
 }
 
 .container * {
   box-sizing: border-box;
-
 }
 
 .form-container {
@@ -38,12 +35,11 @@ p {
   gap: 3%;
   background-color: #ffffff;
   margin: 100px auto;
-  padding: 10vh;
+  padding: 3vh;
   width: 80%;
   min-width: 300px;
   border-radius: 14px;
   box-shadow: 0 3px 10px rgb(201 200 200);
-
 }
 
 input, select , textarea {
@@ -51,7 +47,6 @@ input, select , textarea {
   width: 70%; 
   border-radius: 14px;
   box-shadow: 0 3px 10px rgb(201 200 200);
-
 }
 
 .outer {
@@ -112,7 +107,6 @@ input, select , textarea {
   position: relative;
   margin-left: 10px;
   font-size: 12px;
-
 }
 
 .terminoscb {
@@ -156,8 +150,6 @@ input, select , textarea {
 .button-container button:hover {
   background-color: rgba(116, 30, 30, 0.534);
 }
-
-
 
 /* ----Estilos para validacion---- */
 .formulario__validacion-estado {
@@ -246,9 +238,7 @@ input, select , textarea {
 
   input, select, textarea  {    
       max-width: 13rem;
-    }
-  
-
+    } 
 }
 
 @media screen and (max-width:1200px) {
