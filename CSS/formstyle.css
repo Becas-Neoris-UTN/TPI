@@ -38,8 +38,8 @@ p {
   gap: 3%;
   background-color: #ffffff;
   margin: 100px auto;
-  padding: 40px;
-  width: 70%;
+  padding: 10vh;
+  width: 80%;
   min-width: 300px;
   border-radius: 14px;
   box-shadow: 0 3px 10px rgb(201 200 200);
@@ -243,6 +243,11 @@ input, select , textarea {
   .outer {
     width: 70vw;
   }
+
+  input, select, textarea  {    
+      max-width: 13rem;
+    }
+  
 
 }
 

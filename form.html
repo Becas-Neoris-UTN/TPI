@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="CSS/navbarStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="imagenes/lechuzaICO.ico">
-
 </head>
 
 <body>
@@ -26,8 +25,9 @@
         <div class="form-container">
             <h1>Formulario de Contacto</h1>
             <p>Por favor, rellene el siguiente formulario con la información requerida.</p>
-            <br><br>
-            <form action="http://httpbin.org/post" method="post" id="formulario">
+            <br><br>          
+
+            <form action="#" name="formulario" id="formulario">
                 <ul class="outer">
                     <li class="form__grupo" id="grupo__nombre">
                         <label for="nombre" class="formulario__label">Nombre</label>
@@ -70,15 +70,15 @@
                         <label for="mensaje">Mensaje</label>
                         <textarea name="mensaje" id="mensaje" rows="6" placeholder="Ingresa tu mensaje..."></textarea>
                     </li>
+                   
                     <li class="button-container">
                         <button name="submit" type="submit">Enviar</button>
-                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado con
-                            éxito!</p>
-                    </li>                    
+                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado con éxito!</p>
+                    </li>
                     <div class="formulario__mensaje" id="formulario__mensaje">
                         <p><i class="fas fa-exclamation-triangle"></i><b>Error:</b> Por favor rellena el formulario de
-                            forma correcta.</p>                            
-                    </div>                    
+                            forma correcta.</p>
+                    </div>
                 </ul>
             </form>
         </div>
@@ -101,10 +101,59 @@
 
     <script src="JS/navbar.js"></script>
     <script src="JS/formValidation.js"></script>
-  
-    
- 
+
+    <!-- Libreria Validate.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.min.js"
+        integrity="sha512-8GLIg5ayTvD6F9ML/cSRMD19nHqaLPWxISikfc5hsMJyX7Pm+IIbHlhBDY2slGisYLBqiVNVll+71CYDD5RBqA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script> -->
+
+    <!-- Libreria Fontawesome -->
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+    <!-- Libreria Validate-js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.min.js"
+        integrity="sha256-FtvY52LIDZ2/QHmDNay6PTYvLlRsZICHak0iJEAIBuM=" crossorigin="anonymous"></script> -->
+
+    <!-- <script>
+        window.addEventListener('load', () => {
+            let validadorFormulario = new FormValidator('formulario', [{
+                    name: 'nombre',
+                    display: 'Nombre',
+                    rules: 'requiered|min_lenght[3]'
+                },
+                {
+                    name: 'apellido',
+                    display: 'Apellido',
+                    rules: 'requiered|min_lenght[3]'
+
+                },
+                {
+                    name: 'email',
+                    display: 'E-mail',
+                    rules: 'requiered|valid_email'
+
+                },
+                {
+                    name: 'telefono',
+                    display: 'Teléfono',
+                    rules: 'requiered|min_lenght[8]'
+                }
+            ], function (errores, evento) {
+                if (errores.length) {
+                    let mensaje = '';
+
+                    errores.forEach(function (campo, indice, arreglo) {
+                        mensaje += `${campo.message} <br/>`;
+                    });
+
+                    document.querySelector('#resultadoValidacion').innerHTML = mensaje;
+
+                }
+            })
+        });
+    </script> -->
+
 </body>
 
 </html>

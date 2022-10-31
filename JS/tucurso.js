@@ -1,3 +1,5 @@
+//Validación de formulario de proceso "Tu curso"
+
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -27,7 +29,6 @@ function showTab(n) {
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
-
 
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)

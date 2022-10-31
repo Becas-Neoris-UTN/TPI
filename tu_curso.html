@@ -8,11 +8,8 @@
   <title>Welcomed English Bernal</title>
 
   <!-- jQuery library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-
-  <!-- jsPDF library -->
-  <script src="js/jspdf.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>  
 
   <!-- Estilos -->
   <link rel="stylesheet" href="CSS/style.css">
@@ -27,7 +24,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -75,12 +71,13 @@
       </select>
     </div>
 
+    <!-- Botones -->
     <div style="overflow:auto;">
       <div class="button-container">
         <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
         <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
         <div>
-          <button type="button" id="pdf" onclick="pdfexport();">Generate PDF</button>
+          <button type="button" id="pdf" onclick="pdfexport();">Download PDF</button>
         </div>
       </div>
     </div>
@@ -100,12 +97,13 @@
   <script src="JS/navbar.js"></script>
   <script src="JS/tucurso.js"></script>
 
+  <!-- jsPDF library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+
+  <!-- PDF Export -->
   <script>
-    //PDF Export
     var doc = new jsPDF();
-    //standard variables
-    var boldFont = doc.setFontStyle('bold'),
-      normalFont = doc.setFontStyle('normal');
 
     function pdfexport() {
       var a = document.getElementById('1nombre').value,
@@ -127,7 +125,7 @@
       doc.text("Opción de nivel: " + h, 20, 100);
 
       //Exportar como PDF
-      doc.save("Tu curso WEBernal.pdf");
+      doc.save("TuCursoWEBernal.pdf");
     }
   </script>
 
