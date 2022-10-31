@@ -6,14 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcomed English Bernal</title>
+
+  <!-- jQuery library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+
+  <!-- jsPDF library -->
+  <script src="js/jspdf.min.js"></script>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/tu_curso.css">
   <link rel="stylesheet" href="CSS/navbarStyle.css">
+
+  <!-- Iconos -->
+  <link rel="icon" href="imagenes/lechuzaICO.ico">
   <link rel="shortcut icon" href="imagenes/lechuzaSVG.svg" type="image/x-icon">
+
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="icon" href="imagenes/lechuzaICO.ico">
+
 </head>
 
 <body>
@@ -25,28 +39,28 @@
   <nav class="main"></nav>
 
   <br>
-
+  <div class="resultadoValidacion"></div>
   <form id="regForm" action="">
 
-    <h1>Registro</h1>
+    <h1 class="ltitle">Registro</h1>
     <h2>Con tus datos personalizamos tu curso</h2>
     <h4>Al finalizar podrás descargar la información</h4>
 
     <!-- Un "tab" para cada paso del formulario: -->
     <div class="tab">Nombre:
-      <p><input placeholder="Ingresa tu nombre" oninput="this.className = ''"></p>
-      <p><input placeholder="Ingresa tu apellido" oninput="this.className = ''"></p>
+      <p><input placeholder="Ingresa tu nombre" id="1nombre" oninput="this.className = ''"></p>
+      <p><input placeholder="Ingresa tu apellido" id="1apellido" oninput="this.className = ''"></p>
     </div>
 
     <div class="tab">Información de contacto:
-      <p><input placeholder="Ingresa tu correo electrónico" oninput="this.className = ''"></p>
-      <p><input placeholder="Ingresa tu teléfono" oninput="this.className = ''"></p>
+      <p><input placeholder="Ingresa tu correo electrónico" id="1correo" oninput="this.className = ''"></p>
+      <p><input placeholder="Ingresa tu teléfono" id="1tel" oninput="this.className = ''"></p>
     </div>
 
     <div class="tab">Fecha de nacimiento:
-      <p><input placeholder="dd" oninput="this.className = ''"></p>
-      <p><input placeholder="mm" oninput="this.className = ''"></p>
-      <p><input placeholder="aaaa" oninput="this.className = ''"></p>
+      <p><input placeholder="dd" id="1dia" oninput="this.className = ''"></p>
+      <p><input placeholder="mm" id="1mes" oninput="this.className = ''"></p>
+      <p><input placeholder="aaaa" id="1anio" oninput="this.className = ''"></p>
     </div>
 
     <div class="tab">Nivel:
@@ -59,13 +73,15 @@
         <option value="5">C1</option>
         <option value="6">C2</option>
       </select>
-
     </div>
 
     <div style="overflow:auto;">
       <div class="button-container">
-        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Atras</button>
-        <button type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        <div>
+          <button type="button" id="pdf" onclick="pdfexport();">Generate PDF</button>
+        </div>
       </div>
     </div>
 
@@ -79,14 +95,41 @@
 
   </form>
 
-  <br>
-
   <footer id="footer"></footer>
 
   <script src="JS/navbar.js"></script>
   <script src="JS/tucurso.js"></script>
 
+  <script>
+    //PDF Export
+    var doc = new jsPDF();
+    //standard variables
+    var boldFont = doc.setFontStyle('bold'),
+      normalFont = doc.setFontStyle('normal');
 
+    function pdfexport() {
+      var a = document.getElementById('1nombre').value,
+        b = document.getElementById('1apellido').value;
+      c = document.getElementById('1correo').value;
+      d = document.getElementById('1tel').value;
+      e = document.getElementById('1dia').value;
+      f = document.getElementById('1mes').value;
+      g = document.getElementById('1anio').value;
+      h = document.getElementById('nivel').value;
+
+      //Texto en el PDF      
+      doc.text("WELCOMED ENGLISH BERNAL - Tu curso personalizado:", 20, 30);
+      doc.text("Nombre: " + a, 20, 50);
+      doc.text("Apellido: " + b, 20, 60);
+      doc.text("Correo electrónico: " + c, 20, 70);
+      doc.text("Teléfono: " + d, 20, 80);
+      doc.text("Fecha de nacimiento: " + e + "-" + f + "-" + g, 20, 90);
+      doc.text("Opción de nivel: " + h, 20, 100);
+
+      //Exportar como PDF
+      doc.save("Tu curso WEBernal.pdf");
+    }
+  </script>
 
 </body>
 
