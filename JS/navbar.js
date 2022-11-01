@@ -72,7 +72,6 @@ $courses.addEventListener("mouseleave", hideDropdownMenu)
 window.addEventListener("scroll", fixNav)
 window.addEventListener("resize", recalculateOffsetTop)
 
-
 // For button
 
 const $startNow_Button = document.querySelector(".start-now_button")
@@ -80,7 +79,6 @@ const $startNow_Button = document.querySelector(".start-now_button")
 $startNow_Button.onclick = function () {
     location.href = "form.html"
 }
-
 
 //Boton Whastapp
 
