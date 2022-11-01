@@ -1,0 +1,50 @@
+
+/*Si modifico la imagen de esta sección, se modifica tambien el logo!! */
+.card .foto {
+    width: 15vh;
+    border-radius: 50%;
+    /* background-size: 100% auto; */
+}
+
+
+.card {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    border: 1px solid lightgrey;
+    border-radius: 4%;
+    margin: 0 auto;  
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding: 10px;
+    box-shadow: 0px 1px 10px grey;
+    background-color: rgb(251, 251, 251);
+    overflow: hidden;
+    
+}
+h3,
+h4, .foto
+ {
+    margin: 2%;
+    padding: 2%;
+    width: max-content;
+    align-self: center;
+    font-weight: 400;
+}
+
+.contenedorIconos {
+    display: flex;
+    justify-content: space-evenly;
+    
+
+}
+
+@media all and (max-width: 750px) {
+    .team {
+        flex-direction: column;
+    }
+    .card {
+        align-self: center;
+    }
+    }
