@@ -8,8 +8,16 @@
     <title>Welcomed English Bernal</title>
     <link rel="stylesheet" href="CSS/formstyle.css">
     <link rel="stylesheet" href="CSS/navbarStyle.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Sofia&display=swap"
+        rel="stylesheet">
+
     <link rel="icon" href="imagenes/lechuzaICO.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="JS/funciones.js"></script>
 </head>
 
 <body>
@@ -24,41 +32,44 @@
 
         <div class="form-container">
             <h1>Formulario de Contacto</h1>
-            <p>Por favor, rellene el siguiente formulario con la información requerida.</p>
-            <br><br>          
+            <p>Por favor, completá el formulario.</p>
+            <br><br>
 
             <form action="#" name="formulario" id="formulario">
                 <ul class="outer">
                     <li class="form__grupo" id="grupo__nombre">
                         <label for="nombre" class="formulario__label">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                        <p class="formulario__input-error">El nombre tiene que ser de 3 a 16 digitos y no puede contener
-                            números, solo letras.</p>
+                        <input type="text" class="nombre" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+                        <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
+                        <!-- <p class="formulario__input-error">El nombre tiene que ser de 3 a 16 digitos y no puede contener -->
+                        <!-- números, solo letras.</p> -->
                     </li>
                     <li class="form__grupo" id="grupo__apellido">
                         <label for="apellido" class="formulario__label">Apellido</label>
-                        <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <input type="text" class="apellido" id="apellido" name="apellido"
+                            placeholder="Ingresa tu apellido">
+                        <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         <p class="formulario__input-error">El apellido tiene que ser de 4 a 25 digitos y no puede
-                            contener números, solo letras.</p>
+                            contener números, solo letras.</p> -->
                     </li>
                     <li class="form__grupo" id="grupo__email">
                         <label for="email" class="formulario__label">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                        <p class="formulario__input-error">Correo inválido.</p>
+                        <input type="email" class="email" id="email" name="email"
+                            placeholder="Ingresa tu correo electrónico">
+                        <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <p class="formulario__input-error">Correo inválido.</p> -->
                     </li>
                     <li class="form__grupo" id="grupo__telefono">
                         <label for="telefono" class="formulario__label">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <input type="number" class="telefono" id="telefono" name="telefono"
+                            placeholder="Ingresa tu número de teléfono">
+                        <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         <p class="formulario__input-error">El teléfono debe contener entre 7 y 14 números, sin letras,
                             espacios o símbolos.</p>
-                    </li>
+                    </li> -->
                     <li class="form__grupo" id="grupo__refer">
                         <label for="referido">¿Cómo nos conociste?</label>
-                        <select name="referido" id="referido">
+                        <select name="referido" class="referido" id="referido">
                             <option value="">(seleccione una opción)</option>
                             <option value="1">Facebook</option>
                             <option value="2">Instagram</option>
@@ -68,16 +79,18 @@
                     </li>
                     <li class="form__grupo" id="grupo__mensaje">
                         <label for="mensaje">Mensaje</label>
-                        <textarea name="mensaje" id="mensaje" rows="6" placeholder="Ingresa tu mensaje..."></textarea>
+                        <textarea name="mensaje" class="mensaje" id="mensaje" rows="6"
+                            placeholder="Ingresa tu mensaje..."></textarea>
                     </li>
-                   
+
                     <li class="button-container">
-                        <button name="submit" type="submit">Enviar</button>
-                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado con éxito!</p>
+                        <button name="submit" type="submit" class="boton">Enviar</button>
+                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado con
+                            éxito!</p>
                     </li>
                     <div class="formulario__mensaje" id="formulario__mensaje">
-                        <p><i class="fas fa-exclamation-triangle"></i><b>Error:</b> Por favor rellena el formulario de
-                            forma correcta.</p>
+                        <!-- <p><i class="fas fa-exclamation-triangle"></i><b>Error:</b> Por favor rellena el formulario de
+                            forma correcta.</p> -->
                     </div>
                 </ul>
             </form>
@@ -100,7 +113,7 @@
     <footer id="footer"></footer>
 
     <script src="JS/navbar.js"></script>
-    <script src="JS/formValidation.js"></script>
+    <!-- <script src="JS/formValidation.js"></script> -->
 
 
     <!-- Libreria Fontawesome -->

@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/cursosstyle.css">
     <link rel="stylesheet" href="CSS/navbarStyle.css">
+    <link rel="stylesheet" href="CSS/nosotros.css">
+
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Sofia&display=swap"
+        rel="stylesheet">
+
     <link rel="icon" href="imagenes/lechuzaICO.ico">
     <title>Welcomed English Bernal</title>
 </head>
@@ -25,39 +30,51 @@
     <section class="container">
         <article class="article">
             <div>
-        
+
                 <h2>NOSOTROS</h2>
                 <h1>¿Querés APRENDER inglés? ¿Querés PROFUNDIZAR los conocimientos que ya tenés?</h1>
-                <p>¡Nos apasiona enseñar el idioma! <br>
+                <p>¡Nos apasiona enseñar el idioma! <br><br>
                     Tenemos más de 20 años de experiencia en la enseñanza. Y siempre nos actualizamos con metodologías
-                    nuevas para el aula y los alumnos. <br>
-                    Nos enfocamos 100% en tu aprendizaje, acompañándote a tu ritmo y posibilidades. </p>
+                    nuevas para el aula y los alumnos. <br><br>
+                    Nos enfocamos 100% en tu aprendizaje, acompañándote a tu ritmo y posibilidades. </p><br>
 
                 <h1>FAQ - Preguntas frecuentes:</h1><br>
-                <strong><i>¿Puedo empezar en esta época del año?</i></strong>
-                <p>¡Si! Cualquier momento es bueno para empezar. Lo importante es evaluar tu nivel de inglés y comenzamos.
-                El mejor momento es HOY!!</p>
+                <button class="accordion">¿Puedo empezar en esta época del año?</button>
+                <div class="panel">
+                    <p>¡Si! Cualquier momento es bueno para empezar. Lo importante es evaluar tu nivel de inglés y
+                        comenzamos.
+                        El mejor momento es HOY!!</p>
+                </div>
 
-                <strong><i>¿Cuáles son los niveles de los cursos?</i></strong>
-                <p>Según las edades de los estudiantes, los cursos se dividen en: KIDS (niños), TEENS (adolescentes) y
-                SENIOR (adultos).</p>
+                <button class="accordion">¿Cuáles son los niveles de los cursos?</button>
+                <div class="panel">
+                    <p>Según las edades de los estudiantes, los cursos se dividen en: <br><br>
+                        - KIDS (niños), <br>
+                        - TEENS (adolescentes) y <br>
+                        - SENIOR (adultos).</p>
+                    <p>Según el nivel de conocimiento, los cursos pueden ser de nivel:<br><br>
+                        - A1 y A2 (Beginner), <br>
+                        - B1 y B2 (Intermediate) ó <br>
+                        - C1 y C2 (Advanced).</p>
+                </div>
 
-                <p>Según el nivel de conocimiento, los cursos pueden ser de nivel:
-                - A1 y A2 (Beginner),
-                - B1 y B2 (Intermediate) ó
-                - C1 y C2 (Advanced).</p>
+                <button class="accordion">Mi hijo/a tiene Inglés Técnico en el colegio, ¿lo pueden ayudar?</button>
+                <div class="panel">
+                    <p>¡Si! Trabajamos con bibliografía específica para Inglés Técnico y podemos orientar nuestros
+                        cursos
+                        anuales en esta temática. Además brindamos las bases gramaticales fundamentales y demás aspectos
+                        del
+                        idioma, aplicables a cualquier disciplina.</p>
+                </div>
 
-                <strong><i>Mi hijo/a tiene Inglés Técnico en el colegio, ¿lo pueden ayudar?</i></strong>
-                <p>¡Si! Trabajamos con bibliografía específica para Inglés Técnico y podemos orientar nuestros cursos
-                anuales en esta temática. Además brindamos las bases gramaticales fundamentales y demás aspectos del
-                idioma, aplicables a cualquier disciplina.</p>
-
-                <strong><i>¿Qué costo tienen los cursos?</i></strong>
-                <p>Cada nivel de curso, tiene su costo. Llamanos y te damos todos los detalles.</p>
-                
+                <button class="accordion">¿Qué costo tienen los cursos?</button>
+                <div class="panel">
+                    <p>Cada nivel de curso, tiene su costo. Llamanos y te damos todos los detalles.</p>
+                </div>
+                <br>
                 <button class="start-now_button">¡Comenzá hoy!</button>
 
-            </div>           
+            </div>
 
         </article>
         <aside class="aside">
@@ -75,7 +92,8 @@
 
                 <div class="exam">
                     <p><strong>Exámenes Cambridge</strong></p>
-                    <a href="exam.html"><img src="imagenes/cambridge-assessment-international-education-logo.jpg" alt=""></a>
+                    <a href="exam.html"><img src="imagenes/cambridge-assessment-international-education-logo.jpg"
+                            alt=""></a>
                 </div>
             </div>
 
@@ -84,7 +102,23 @@
 
     <footer id="footer"></footer>
     <script src="JS/navbar.js"></script>
-  
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
 </body>
 
 </html>

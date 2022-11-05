@@ -15,6 +15,7 @@ h1,
 p {
   display: flex;
   justify-content: center;
+  margin-top: 7%;
 }
 
 .container {
@@ -32,6 +33,7 @@ p {
 
 .form-container {
   display: grid;
+  align-content: space-around;
   gap: 3%;
   background-color: #ffffff;
   margin: 100px auto;
@@ -42,9 +44,11 @@ p {
   box-shadow: 0 3px 10px rgb(201 200 200);
 }
 
-input, select , textarea {
-  background-color: #ffffff; 
-  width: 70%; 
+input,
+select,
+textarea {
+  background-color: #ffffff;
+  width: 70%;
   border-radius: 14px;
   box-shadow: 0 3px 10px rgb(201 200 200);
 }
@@ -103,15 +107,9 @@ input, select , textarea {
   margin-left: 30%;
 }
 
-.terminos {
-  position: relative;
-  margin-left: 10px;
-  font-size: 12px;
-}
-
-.terminoscb {
-  display: flex;
-  position: absolute
+.error {
+  color: rgb(177, 0, 0);
+  padding: 2%;
 }
 
 #mapalargo,
@@ -126,7 +124,7 @@ input, select , textarea {
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: center;  
+  align-items: center;
   padding: 2%;
 }
 
@@ -139,16 +137,19 @@ input, select , textarea {
 .button-container button {
   margin-left: auto;
   padding: 1%;
-  background-color: rgba(189, 35, 35, 0.534);
+  background-color: rgb(177, 0, 0);
   color: white;
   border: 1px solid rgb(185, 163, 163);
   border-radius: 6px;
-  font-size: 1vw;
+  font-size: 16px;
   cursor: pointer;
 }
 
 .button-container button:hover {
-  background-color: rgba(116, 30, 30, 0.534);
+  background-color: white;
+  border: 1px solid rgb(177, 0, 0);
+  color: rgb(177, 0, 0);
+
 }
 
 /* ----Estilos para validacion---- */
@@ -227,7 +228,7 @@ input, select , textarea {
 
   .button-container button {
     margin: 0;
-    font-size: 2.5vw;
+    font-size: 16px;
   }
 }
 
@@ -236,9 +237,11 @@ input, select , textarea {
     width: 70vw;
   }
 
-  input, select, textarea  {    
-      max-width: 13rem;
-    } 
+  input,
+  select,
+  textarea {
+    max-width: 13rem;
+  }
 }
 
 @media screen and (max-width:1200px) {
