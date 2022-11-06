@@ -261,7 +261,7 @@ footer p {
 
 .site-map {
     display: flex;
-    gap: 5vw;
+    gap: 1.5vw;
     justify-content: center;
     margin-left: auto;
 }
@@ -294,6 +294,11 @@ footer p {
         font-size: 3vw;
     }
 
+    .logo img {
+        max-width: 30%;
+        padding: 2%;
+    }
+
     .images div {
         width: 80%;
     }
@@ -314,8 +319,8 @@ footer p {
 
     .message {
         font-size: 1rem;
-        width: 26vw;
-        height: 28vw;
+        width: 45vw;
+        height: 45vw;
     }
 
     .start-now_button {

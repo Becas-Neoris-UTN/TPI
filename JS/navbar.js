@@ -76,13 +76,13 @@ window.addEventListener("resize", recalculateOffsetTop)
 
 const $startNow_Button = document.querySelector(".start-now_button")
 
-$startNow_Button.onclick = function() {
+$startNow_Button.onclick=function() {
     location.href = "form.html"
 }
 
 //Boton Whastapp
 
-document.getElementsByTagName("footer").innerHTML=footer
+document.getElementsByTagName("footer").innerHTML=$footer
 let boton_whatsapp =`
         <a class="boton_whatsapp" href="https://wa.me/5491166098123/?text=Hola,%20Welcomed%20English%20Bernal!" target="_blank">
             <img src="imagenes/whatsapp.png" class="boton_whatsapp">

@@ -18,7 +18,7 @@ html {
 }
 
 .logo img {
-    max-width: 25%;
+    width: 25%;
     padding: 4%;
 }
 
@@ -161,10 +161,11 @@ footer p {
 .boton_whatsapp img {
     position: fixed;
     bottom: 3rem;
-    right: 1rem;
-    width: 5vh;
+    right: 2rem;
+    width: 4rem;
+    box-shadow: 0 3px 10px rgb(201 200 200);
+    border-radius: 50%;
 }
-
 
 /* Media queries */
 

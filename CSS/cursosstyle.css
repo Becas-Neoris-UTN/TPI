@@ -11,13 +11,13 @@ body {
 }
 
 /*Contenido central*/
- .container {
+.container {
     display: grid;
     grid-template: 1fr / 3fr 1fr;
     gap: 3%;
     background-color: rgba(245, 245, 245, 0.555);
     padding: 3%;
-} 
+}
 
 article {
     display: flex;
@@ -25,7 +25,7 @@ article {
 }
 
 .image {
-    padding: 4% 8% 4% 0;    
+    padding: 4% 8% 4% 0;
 }
 
 .image img {
@@ -37,7 +37,7 @@ aside {
     margin: 4% 0;
 }
 
-aside img{
+aside img {
     width: 100%;
     border-radius: 6px;
     border: 1px solid lightgray;
@@ -47,14 +47,13 @@ aside img{
 .courses {
     display: flex;
     flex-direction: column;
-    /* padding: 3%; */
     justify-content: flex-start;
     gap: 1%;
 }
 
 .courses div {
     width: 100%;
-    text-align: center;    
+    text-align: center;
     transition: all 0.5s;
     box-shadow: 0 3px 10px rgb(201, 200, 200);
     border-radius: 14px;
@@ -104,5 +103,4 @@ aside img{
     .start-now_button {
         font-size: 16px;
     }
-
 }

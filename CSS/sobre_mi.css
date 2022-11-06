@@ -33,6 +33,7 @@ h4, .foto
     display: flex;
     justify-content: space-evenly;
     padding: 3%;
+    width: fit-content;
 }
 
 @media all and (max-width: 750px) {
@@ -42,5 +43,6 @@ h4, .foto
     .card {
         align-self: center;
         width: 80%;
+        font-size: small;
     }
     }
