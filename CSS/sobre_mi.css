@@ -36,6 +36,8 @@ h4, .foto
 .contenedorIconos {
     display: flex;
     justify-content: center;
+    gap: 10px;
+    padding: 3%;
 }
 .contenedorIconos .brands .icono{
     padding: 5px;
