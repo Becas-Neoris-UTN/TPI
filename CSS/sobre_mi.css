@@ -17,7 +17,7 @@
     box-shadow: 0px 1px 10px grey;
     background-color: rgb(251, 251, 251);
     overflow: hidden;
-    height: 63vh;
+
 }
 h3,
 h4, .foto
@@ -29,17 +29,19 @@ h4, .foto
     font-weight: 400;
 }
 
-.contenedorIconos {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 3%;
-    width: fit-content;
+.brands {
+    display: contents;
 }
 
-@media all and (max-width: 750px) {
-    .team {
-        flex-direction: column;
-    }
+.contenedorIconos {
+    display: flex;
+    justify-content: center;
+}
+.contenedorIconos .brands .icono{
+    padding: 5px;
+}
+
+@media all and (max-width: 750px) {  
     .card {
         align-self: center;
         width: 80%;
